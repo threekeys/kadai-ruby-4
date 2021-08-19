@@ -39,46 +39,44 @@
         <p>ありがとうございました。送信を受け付けました。</p>
         <p>3営業日以内をめどにご返信いたしますので、しばらくお待ちください。</p>
         <div class="mb-3 row">
-                        
-                        <label class="col-form-label col-sm-3">会社名：</label>
+            <label class="col-form-label col-sm-3">会社名：</label>
+            <div class="col-sm-9">
+                <% c_name = params['company'] %>
+                <p><%= c_name %></p>
+            </div>
+        </div>
 
-                        <div class="col-sm-9">
-                            <% c_name = params['company'] %>
-                            <p><%= c_name %></p>
-                        </div>
-                    </div>
+        <div class="mb-3 row">
+            <label class="col-form-label col-sm-3">氏名：</label>
 
-                    <div class="mb-3 row">
-                        <label class="col-form-label col-sm-3">氏名：</label>
+            <div class="col-sm-9">
+                <p><%= params['name'] %></p>
+            </div>
+        </div>
 
-                        <div class="col-sm-9">
-                            <p><%= params['name'] %></p>
-                        </div>
-                    </div>
+        <div class="mb-3 row">
+            <label class="col-form-label col-sm-3">メール：</label>
 
-                    <div class="mb-3 row">
-                        <label class="col-form-label col-sm-3">メール：</label>
+            <div class="col-sm-9">
+                <p><%= params['mail'] %></p>
+            </div>
+        </div>
 
-                        <div class="col-sm-9">
-                            <p><%= params['mail'] %></p>
-                        </div>
-                    </div>
+        <div class="mb-3 row">
+            <label class="col-form-label col-sm-3">電話番号：</label>
 
-                    <div class="mb-3 row">
-                        <label class="col-form-label col-sm-3">電話番号：</label>
+            <div class="col-sm-9">
+                <p><%= params['tel'] %></p>
+            </div>
+        </div>
 
-                        <div class="col-sm-9">
-                            <p><%= params['tel'] %></p>
-                        </div>
-                    </div>
+        <div class="mb-3 row">
+            <label class="col-form-label col-sm-3">内容：</label>
 
-                    <div class="mb-3 row">
-                        <label class="col-form-label col-sm-3">内容：</label>
-
-                        <div class="col-sm-9">
-                            <p><%= params['content'].gsub(/\r\n|\r|\n/, "<br>") %></p>
-                        </div>
-                    </div>
+            <div class="col-sm-9">
+                <p><%= params['content'].gsub(/\r\n|\r|\n/, "<br>") %></p>
+            </div>
+        </div>
         <div class="text-center mb-4">
             <a href="/" class="btn btn-success">戻る</a>
         </div>
